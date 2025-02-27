@@ -80,6 +80,17 @@ services:
     networks:
       - webnet
     shm_size: '2gb'
+  newman:
+    build:
+      context: ./postman-login-test
+      dockerfile: Dockerfile  
+    container_name: postman-login-test  
+    volumes:
+      - .:/usr/src/app  # Mount the current directory to the container  
+    depends_on:
+      - nodejs
+    networks:
+      - webnet
 
 volumes:
   mysql_data:

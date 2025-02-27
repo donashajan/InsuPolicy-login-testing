@@ -51,6 +51,8 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
+  console.log('in login '+username);
+
   // Basic login validation (you can replace this with actual DB authentication)
   if (username === 'admin' && password === 'password') {
         // Successful login
