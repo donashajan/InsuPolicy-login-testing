@@ -1,0 +1,35 @@
+{
+    "info": {
+      "name": "URL Test",
+      "_postman_id": "url-test-collection",
+      "description": "Test if a URL is live"
+    },
+    "item": [
+      {
+        "name": "Check URL Status",
+        "request": {
+          "url": {
+            "raw": "{{url}}",  
+            "host": [
+              "{{url}}"
+            ]
+          },
+          "method": "GET",
+          "header": []
+        },
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "exec": [
+                "pm.test('URL is live', function () {",
+                "    pm.response.to.have.status(200);",
+                "});"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

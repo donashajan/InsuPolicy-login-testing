@@ -1,0 +1,38 @@
+
+{
+    "info": {
+      "name": "Login Test",
+      "_postman_id": "26b9d1e3-f561-4688-9fab-e5d1cefe3fb0",
+      "description": "Test login functionality using POST request"
+    },
+    "item": [
+      {
+        "name": "Login Request",
+        "request": {
+          "url": {
+            "raw": "http://localhost/login", 
+            "protocol": "http",
+            "host": [
+              "example",
+              "com"
+            ],
+            "path": [
+              "login"
+            ]
+          },
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"admin\", \n  \"password\": \"password\"  \n}"
+          }
+        }
+      }
+    ]
+  }
+  
